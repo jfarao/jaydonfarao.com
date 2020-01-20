@@ -1,21 +1,22 @@
 <?php
-$field_name = $_POST['cf_name'];
-$field_email = $_POST['cf_email'];
-$field_message = $_POST['cf_message'];
+    $name = $_POST['name']; 
+    $visitor_email = $_POST['email'];
+    $message = $_POST['message'];
 
-$mail_to = 'jaydon.farao11@gmail.com';
-$subject = 'New Form Submission'.$field_name;
+    $mail_to = 'jaydon.farao11@gmail.com';
+    $email_subject = 'New Form Submission'.$name;
 
-$body_message = 'From: '.$field_name."\n";
-$body_message .= 'E-mail: '.$field_email."\n";
-$body_message .= 'Message: '.$field_message;
+    $email_body = 'User Name: '.$name. "\n";
+    $email_body .= 'User Email: '.$visitor_email."\n";
+    $email_body .= 'User Message: '.$message;
 
-$headers = 'From: '.$field_email."\r\n";
-$headers .= 'Reply-To: '.$field_email."\r\n";
+    $headers = 'From: '.$visitor_email. "\r\n";
+    $headers .= 'Reply to: '.$visitor_email."\r\n";
 
-$mail_status = mail($mail_to, $subject, $body_message, $headers);
-
-if ($mail_status) { ?>
+    $mail_status = mail($mail_to, $email_subject, $email_body, $headers);
+    
+    
+f ($mail_status) { ?>
 	<script language="javascript" type="text/javascript">
 		alert('Sucess Message');
 		window.location = 'index.html';
