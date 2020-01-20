@@ -6,12 +6,12 @@
     $mail_to = 'jaydon.farao11@gmail.com';
     $email_subject = 'New Form Submission'.$name;
 
-    $email_body = "User Name: $name. \n".
-    $email_body =     "User Email: $visitor_email.\n".
-    $email_body =         "User Message: $message. \n";
+    $email_body = 'User Name: '.$name. "\n";
+    $email_body .= 'User Email: '.$visitor_email."\n";
+    $email_body .= 'User Message: '.$message;
 
-    $headers = 'From: '.$visitor_email "\r\n";
-    $headers = 'Reply to: '.$visitor_email "\r\n";
+    $headers = 'From: '.$visitor_email. "\r\n";
+    $headers .= 'Reply to: '.$visitor_email."\r\n";
 
     $mail_status = mail($mail_to, $email_subject, $email_body, $headers);
     
