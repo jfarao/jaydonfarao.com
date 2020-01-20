@@ -2,22 +2,32 @@
     $name = $_POST['name']; 
     $visitor_email = $_POST['email'];
     $message = $_POST['message'];
-    
-    $email_from = 'frxjay002@myuct.ac.za';
-    
-    $email_subject = "New Form Submission";
-    
+
+    $mail_to = 'jaydon.farao11@gmail.com';
+    $email_subject = 'New Form Submission'.$name;
+
     $email_body = "User Name: $name. \n".
-                    "User Email: $visitor_email.\n".
-                       "User Message: $message. \n";
-                       
-    $to = "jaydon.farao11@gmail.com";
+    $email_body =     "User Email: $visitor_email.\n".
+    $email_body =         "User Message: $message. \n";
+
+    $headers = 'From: '.$visitor_email "\r\n";
+    $headers = 'Reply to: '.$visitor_email "\r\n";
+
+    $mail_status = mail($mail_to, $email_subject, $email_body, $headers);
     
-    $headers = "From: $email_from \r\n";
     
-    $headers .= "Reply-To: $visitor_email \r\n";
-    
-    mail($to,$email_subject,$email_body,$headers);
-    
-    header("Location: index.html");
+f ($mail_status) { ?>
+	<script language="javascript" type="text/javascript">
+		alert('Sucess Message');
+		window.location = 'index.html';
+	</script>
+<?php
+}
+else { ?>
+	<script language="javascript" type="text/javascript">
+		alert('Error Message');
+		window.location = 'index.html';
+	</script>
+<?php
+}
 ?>
