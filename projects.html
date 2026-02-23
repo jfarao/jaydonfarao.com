@@ -1,1 +1,108 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Projects — Jaydon Farao</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <!-- optional: project-specific stylesheet -->
+    <style>
+      /* Minimal additions to create the project card grid */
+      .projects-hero { padding: 3rem 0; text-align:center; }
+      .project-grid {
+        display:grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 1.25rem;
+        margin-top: 1.5rem;
+      }
+      .project-card {
+        background: rgba(255,255,255,0.03);
+        border: 1px solid rgba(255,255,255,0.04);
+        padding: 1rem;
+        border-radius: 6px;
+        min-height: 220px;
+        display:flex;
+        flex-direction:column;
+        justify-content:space-between;
+      }
+      .project-card img { width:100%; height:140px; object-fit:cover; border-radius:4px; }
+      .project-card .meta { margin-top: 0.65rem; }
+      .project-card .tags { font-size:0.8rem; color: #9aa; margin-top:.5rem; }
+      .project-card a.cta { margin-top: .8rem; display:inline-block; color: #fff; text-decoration:none; padding:.45rem .65rem; background:#444; border-radius:4px; }
+      @media (max-width:480px){ .project-card img{height:120px;} }
+    </style>
+  </head>
+  <body class="is-preload">
+    <!-- Header: you can copy your exact header markup from index.html so the nav matches -->
+    <!-- BEGIN header (use same header block as index.html) -->
+    <header id="header">
+      <a class="logo" href="index.html">Jaydon Farao</a>
+      <nav>
+        <ul>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="index.html#work">Publications</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- END header -->
 
+    <div id="main">
+      <article class="projects-hero">
+        <h2 class="major">Projects</h2>
+        <p class="minor">Community-centred UX research, digital health, and relational design practice.</p>
+      </article>
+
+      <section class="container" style="max-width:1100px;margin:0 auto;padding:2rem 1rem;">
+        <!-- Featured row (2 columns) -->
+        <div style="display:grid;grid-template-columns: 1fr 1fr; gap:1rem; margin-bottom:1.5rem;">
+          <!-- Featured card (large): replace href and image -->
+          <div class="project-card" style="min-height:260px;">
+            <img src="assets/projects/ltbi1.jpg" alt="LTBI app hero">
+            <div class="meta">
+              <h3>Remote TB screening app — LTBI (TST)</h3>
+              <p class="minor">Improved onboarding and image capture workflows for clinic staff in under-resourced settings.</p>
+              <div class="tags">mHealth • Usability • Field research</div>
+              <a class="cta" href="projects/ltbi.html">View project →</a>
+            </div>
+          </div>
+          <!-- Another featured -->
+          <div class="project-card" style="min-height:260px;">
+            <img src="assets/projects/oceanview.jpg" alt="Ocean View co-design hero">
+            <div class="meta">
+              <h3>Ocean View — Community Co-design</h3>
+              <p class="minor">Relational co-design with local residents to design community-led artefacts and processes.</p>
+              <div class="tags">Participatory design • Fieldwork • Ethics</div>
+              <a class="cta" href="projects/oceanview.html">View project →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Grid for other projects -->
+        <div class="project-grid">
+          <!-- Example card -->
+          <div class="project-card">
+            <img src="assets/projects/soweto/thumb.jpg" alt="Soweto project">
+            <div class="meta">
+              <h4>Soweto — Co-design</h4>
+              <p class="minor">Tailored methods for local governance and design.</p>
+              <div class="tags">Community • Ethnography</div>
+              <a class="cta" href="projects/soweto.html">Open →</a>
+            </div>
+          </div>
+
+          <!-- add more cards similarly -->
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer (copy your footer block from index.html) -->
+    <footer id="footer">
+      <p class="copyright">&copy; Jaydon Farao</p>
+    </footer>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
