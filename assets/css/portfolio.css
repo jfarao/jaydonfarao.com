@@ -7,6 +7,10 @@
    NAVIGATION CENTERING FIX
    ======================================== */
 
+article#portfolio { max-width: 1800px !important; width: 100% !important; margin: 0 auto !important; }
+.portfolio-grid, .portfolio-card, .card-content { width: 100% !important; box-sizing: border-box !important; }
+
+
 #header nav ul li a {
     text-align: center !important;
     padding: 0 1.25rem !important;
