@@ -484,6 +484,12 @@ article[id$="-detail"] {
     }
 }
 
+.portfolio-grid { align-items: stretch !important; }
+.portfolio-card { height: 100% !important; display: flex !important; flex-direction: column !important; }
+.card-content { flex: 1 !important; display: flex !important; flex-direction: column !important; }
+.card-content h3 { min-height: 2.6em !important; display: flex !important; align-items: center !important; }
+.card-meta { flex: 1 !important; }
+
 /* ============================================
    END OF FIXES
    ============================================ */
