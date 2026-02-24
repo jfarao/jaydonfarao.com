@@ -7,8 +7,71 @@
    NAVIGATION CENTERING FIX
    ======================================== */
 
-article#portfolio { max-width: 1800px !important; width: 100% !important; margin: 0 auto !important; }
-.portfolio-grid, .portfolio-card, .card-content { width: 100% !important; box-sizing: border-box !important; }
+/* 
+ * IMMEDIATE FIX: Add this to your portfolio.css
+ * Paste at the TOP of the file
+ */
+
+/* Force portfolio to fill available width */
+article#portfolio {
+    max-width: 1800px !important; /* Increase from default */
+    margin: 0 auto !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 2em !important;
+}
+
+/* Force grid to fill portfolio width */
+.portfolio-grid {
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Force cards to fill grid cells */
+.portfolio-card {
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Force content to fill cards */
+.card-content {
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Force all text elements to fill content */
+.card-content h3,
+.card-tagline,
+.card-meta,
+.portfolio-card .actions,
+.portfolio-card .actions li,
+.portfolio-card .button {
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Remove any default list padding */
+.portfolio-card .actions {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+}
+
+.portfolio-card .actions li {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+}
+
+/* Center button text */
+.portfolio-card .button {
+    text-align: center !important;
+}
+
+/* For even larger screens, allow more growth */
+@media screen and (min-width: 1920px) {
+    article#portfolio {
+        max-width: 2000px !important;
+    }
+}
 
 
 #header nav ul li a {
