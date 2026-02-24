@@ -396,3 +396,94 @@ article[id$="-detail"] p {
         align-items: stretch;
     }
 }
+
+/* ============================================
+   FIXES FOR MODAL TITLES & CARD TEXT
+   Copy this entire section to the bottom of your portfolio.css
+   ============================================ */
+
+/* ----------------------------------------
+   FIX 1: MODAL TITLE OVERFLOW
+   Makes titles wrap properly, prevents overflow
+   ---------------------------------------- */
+
+article[id$="-detail"] h2.major {
+    font-size: 1.8em !important;
+    line-height: 1.3 !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    hyphens: auto !important;
+    max-width: 100% !important;
+    margin-bottom: 1em !important;
+}
+
+/* Smaller titles on tablets */
+@media screen and (max-width: 1024px) {
+    article[id$="-detail"] h2.major {
+        font-size: 1.5em !important;
+    }
+}
+
+/* Even smaller on phones */
+@media screen and (max-width: 736px) {
+    article[id$="-detail"] h2.major {
+        font-size: 1.3em !important;
+        line-height: 1.4 !important;
+    }
+}
+
+/* Ensure modals have proper width */
+article[id$="-detail"] {
+    max-width: 100% !important;
+    padding: 2.5em 2em !important;
+    box-sizing: border-box !important;
+}
+
+@media screen and (max-width: 736px) {
+    article[id$="-detail"] {
+        padding: 2em 1.5em !important;
+    }
+}
+
+/* ----------------------------------------
+   FIX 2: LARGER TEXT ON SMALL SCREENS
+   Makes Role/Duration/Methods readable
+   ---------------------------------------- */
+
+/* Increase text size on tablets and smaller */
+@media screen and (max-width: 1280px) {
+    .card-meta {
+        font-size: 0.95em !important; /* Up from 0.85em */
+        line-height: 1.7 !important;
+    }
+    
+    .card-meta strong {
+        font-size: 1em !important;
+        font-weight: 600 !important;
+    }
+    
+    .card-tagline {
+        font-size: 1em !important; /* Up from 0.95em */
+    }
+}
+
+/* Even larger on mobile phones */
+@media screen and (max-width: 736px) {
+    .card-meta {
+        font-size: 1em !important; /* Full size */
+        line-height: 1.8 !important;
+    }
+    
+    .card-tagline {
+        font-size: 1.05em !important;
+    }
+    
+    .card-content h3 {
+        font-size: 1.4em !important; /* Slightly bigger heading */
+        line-height: 1.3 !important;
+    }
+}
+
+/* ============================================
+   END OF FIXES
+   ============================================ */
