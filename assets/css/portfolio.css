@@ -1,0 +1,331 @@
+/* 
+ * COMPLETE PORTFOLIO STYLES - ALIGNMENT FIXED VERSION
+ * Replace your current portfolio.css with this file
+ */
+
+/* ========================================
+   NAVIGATION CENTERING FIX
+   ======================================== */
+
+#header nav ul li a {
+    text-align: center !important;
+    padding: 0 1.25rem !important;
+    min-width: 8.5rem !important;
+}
+
+#header nav ul {
+    justify-content: center;
+}
+
+#header nav ul li {
+    flex: 1 1 auto;
+}
+
+/* ========================================
+   PORTFOLIO CARD GRID
+   ======================================== */
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2em;
+    margin: 2em 0;
+    align-items: start; /* Align cards to top */
+}
+
+/* ========================================
+   INDIVIDUAL CARDS - ALIGNMENT FIXED
+   ======================================== */
+
+.portfolio-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Card Images */
+.portfolio-card .image.fit {
+    margin: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    flex-shrink: 0;
+}
+
+.portfolio-card .image.fit img {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Card Content - ALIGNMENT FIXES APPLIED */
+.card-content {
+    padding: 1.5em;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: left; /* Explicit left alignment */
+}
+
+.card-content h3 {
+    margin: 0 0 0.5em 0;
+    font-size: 1.3em;
+    color: #ffffff;
+    text-align: left;
+    width: 100%;
+}
+
+.card-tagline {
+    font-size: 0.95em;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 1em;
+    line-height: 1.5;
+    text-align: left;
+    width: 100%;
+}
+
+.card-meta {
+    font-size: 0.85em;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.6;
+    margin-bottom: 1.5em;
+    text-align: left;
+    width: 100%;
+    flex: 1; /* Pushes button to bottom */
+}
+
+.card-meta strong {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Card Buttons - ALIGNMENT FIXES APPLIED */
+.portfolio-card .actions {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+}
+
+.portfolio-card .actions li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 100%;
+}
+
+.portfolio-card .button {
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* ========================================
+   DETAIL PAGE STYLES
+   ======================================== */
+
+#portfolio h3,
+article[id$="-detail"] h3 {
+    margin-top: 2em;
+    margin-bottom: 1em;
+    color: #ffffff;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 0.5em;
+}
+
+article[id$="-detail"] h4 {
+    margin-top: 1.5em;
+    margin-bottom: 0.75em;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Enhanced blockquote styling */
+blockquote {
+    border-left: 4px solid #4CAF50;
+    padding-left: 1.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 2em 0;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+/* Better list styling */
+article[id$="-detail"] ul {
+    margin: 1em 0 1.5em 0;
+}
+
+article[id$="-detail"] ul li {
+    margin-bottom: 0.75em;
+    line-height: 1.6;
+}
+
+article[id$="-detail"] ul li strong {
+    color: #4CAF50;
+}
+
+/* Stats Display */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1.5em 0;
+}
+
+.col-6 {
+    width: 50%;
+    padding: 0 1em;
+}
+
+.col-12-small {
+    width: 100%;
+}
+
+/* Back Button */
+article[id$="-detail"] .actions {
+    margin-top: 3em;
+    padding-top: 2em;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+/* Mobile (up to 736px) */
+@media screen and (max-width: 736px) {
+    /* Navigation */
+    #header nav ul li a {
+        min-width: auto;
+        padding: 0 0.75rem !important;
+        font-size: 0.7rem;
+    }
+    
+    /* Cards */
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5em;
+    }
+    
+    .portfolio-card .image.fit img {
+        height: 180px;
+    }
+    
+    /* Stats */
+    .col-6 {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 1em;
+    }
+    
+    /* Blockquotes */
+    blockquote {
+        padding-left: 1em;
+        border-left-width: 3px;
+    }
+}
+
+/* Tablet (737px to 1280px) */
+@media screen and (min-width: 737px) and (max-width: 1280px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop (1281px and up) */
+@media screen and (min-width: 1281px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    /* Ensure consistent card heights */
+    .portfolio-card {
+        height: 100%; /* Fill grid cell */
+    }
+}
+
+/* Large screens (1920px and up) - Extra alignment insurance */
+@media screen and (min-width: 1920px) {
+    .portfolio-grid {
+        max-width: 1600px; /* Prevent cards from getting too wide */
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* ========================================
+   ANIMATIONS
+   ======================================== */
+
+.portfolio-card,
+article[id$="-detail"] h3,
+article[id$="-detail"] p {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================================
+   PRINT STYLES
+   ======================================== */
+
+@media print {
+    .portfolio-card {
+        break-inside: avoid;
+        border: 1px solid #000;
+        box-shadow: none;
+        transform: none;
+    }
+    
+    blockquote {
+        border-left-color: #000;
+        color: #000;
+    }
+    
+    .button {
+        display: none;
+    }
+    
+    .portfolio-card:hover {
+        transform: none;
+        box-shadow: none;
+    }
+}
+
+/* ========================================
+   BROWSER-SPECIFIC FIXES
+   ======================================== */
+
+/* Safari-specific fixes */
+@supports (-webkit-appearance: none) {
+    .portfolio-card .button {
+        -webkit-appearance: none;
+    }
+}
+
+/* Firefox-specific fixes */
+@-moz-document url-prefix() {
+    .portfolio-grid {
+        align-items: stretch;
+    }
+}
